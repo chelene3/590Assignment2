@@ -33,6 +33,10 @@ public aspect Tracer {
     }
     return i;
   }
+
+  after() returning : call(* *.rollUnfairDie()) {
+    System.out.println("\'Oops you rolled the Unfair Dice, here's a one!!\'");
+  }
   
 
 }
