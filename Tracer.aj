@@ -21,11 +21,12 @@ public aspect Tracer {
 
   int around(): call(* *.rollUnfairDie()) {
     proceed();
-    System.out.println("-- after rolling the dice --");
+    System.out.println("-- after rolling the unfair dice, fixed to always roll a 1 --");
     return 1;
   }
 
   int around(int i): call(* *.rollThisNumber(int)) && args(i) {
+    System.out.println("-- Rolling 2 less or 1 more than what is requested --");
     i = i-2; 
     if (i < 0) {
       i = i + 3;
