@@ -25,8 +25,12 @@ public aspect Tracer {
     return 1;
   }
 
-  int around(): call(* *.rollThisNumber(*)) {
-    return 5; 
+  int around(int i): call(* *.rollThisNumber(int)) && args(i) {
+    i = i-2; 
+    if (i < 0) {
+      i = i + 3;
+    }
+    return i;
   }
   
 
