@@ -18,6 +18,7 @@ public class Dice {
 		System.out.println("Roll of fair dice: " + fairRoll);
 		int unfairRoll = ud.rollUnfairDie();
 		System.out.println("Roll of unfair dice: " + unfairRoll);
+		System.out.println("Roll a six please: " + ud.rollThisNumber(6));
   	}
 	
 	public int getSides() {

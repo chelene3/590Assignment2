@@ -18,5 +18,9 @@ public class UnfairDice {
 		return roll;
 	}
 
+        public int rollThisNumber(int number) {
+	        return number;
+	}
+
 }
 

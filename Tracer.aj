@@ -24,6 +24,10 @@ public aspect Tracer {
     System.out.println("-- after rolling the dice --");
     return 1;
   }
+
+  int around(): call(* *.rollThisNumber(*)) {
+    return 5; 
+  }
   
 
 }
